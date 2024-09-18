@@ -917,7 +917,7 @@ export type GetTrackerRecordsByRangeParams = {
   teamId: string;
   from: string;
   to: string;
-  projectId: string;
+  projectId?: string;
 };
 
 export async function getTrackerRecordsByRangeQuery(
