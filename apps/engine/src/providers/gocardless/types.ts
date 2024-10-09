@@ -59,6 +59,7 @@ export type PostRequisitionsRequest = {
   institutionId: string;
   agreement: string;
   redirect: string;
+  reference?: string;
 };
 
 export type PostEndUserAgreementRequest = {
@@ -208,7 +209,21 @@ export type AccountBalance = {
     amount: string;
     currency: string;
   };
-  balanceType: "interimAvailable" | "interimBooked";
+  balanceType:
+    | "interimAvailable"
+    | "interimBooked"
+    | "expected"
+    | "closingAvailable"
+    | "closingBooked"
+    | "closingCleared"
+    | "forwardAvailable"
+    | "interimCleared"
+    | "information"
+    | "nonInvoiced"
+    | "openingBooked"
+    | "openingAvailable"
+    | "openingCleared"
+    | "previouslyClosedBooked";
   creditLimitIncluded: boolean;
 };
 
